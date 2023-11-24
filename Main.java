@@ -1,11 +1,31 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Iniciando teste do Banco Ophidian...");
+        System.out.println("-=".repeat(20));
+        System.out.println("Iniciando o Banco Ophidian...");
+        System.out.println("-=".repeat(20));
+        Scanner scan = new Scanner(System.in);
 
-        // Criando uma instância do BancoOphidian e chamando o método principal
-        BancoOphidian bancoOphidian = new BancoOphidian();
-        bancoOphidian.simularAtendimento();
+        BancoOphidian bancoOphi = new BancoOphidian();
+        //adiciona 5 clientes a fila
+        for (int i = 0; i < 5; i++ ){
+            bancoOphi.addcliente();
+        }
+        bancoOphi.mostrarSaguao();
+        for (int i = 0; i < 5; i++ ){
+            bancoOphi.atendimento();
+            bancoOphi.mostrarSaguao();
+        } 
 
-        System.out.println("Teste do Banco Ophidian concluído.");
+
+        System.out.println("-=".repeat(20));
+        System.out.println("Iniciando o contador binário ...");
+        System.out.println("-=".repeat(20));
+        BinaryCounter binario = new BinaryCounter();
+        System.out.println("Digite o valor de N: ");
+        int n = scan.nextInt();
+        binario.gerarBinarios(n);
+        binario.mostrarBinarios();
     }
 }
