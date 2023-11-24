@@ -8,7 +8,7 @@ public class Main {
         Scanner scan = new Scanner(System.in);
 
         BancoOphidian bancoOphi = new BancoOphidian();
-        //adiciona 5 clientes a fila
+        
         for (int i = 0; i < 5; i++ ){
             bancoOphi.addcliente();
         }
